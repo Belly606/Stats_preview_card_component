@@ -1,0 +1,129 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	min-height: 100vh;
+	background-color: hsl(233, 47%, 7%);
+	font-family: 'Inter', sans-serif, 'Lexend Deca', sans-serif;
+	display: grid;
+	place-items: center;
+}
+main {
+	background-color: hsl(244, 38%, 16%);
+	display: flex;
+	overflow: hidden;
+	border-radius: 0.9em;
+	-webkit-border-radius: 0.9em;
+	-moz-border-radius: 0.9em;
+	-ms-border-radius: 0.9em;
+	-o-border-radius: 0.9em;
+}
+@media (width: 375px) {
+	main {
+		flex-direction: column-reverse;
+		justify-content: flex-end;
+		height: 80vh;
+		margin: 20px;
+	}
+}
+main .info {
+	padding: 3.5em;
+	color: white;
+	width: 50%;
+}
+@media (width: 375px) {
+	main .info {
+		width: 100%;
+		height: 50%;
+		padding: 2.5em 1.5em;
+	}
+}
+main .info h2 {
+	font-size: 2.5em;
+	margin-bottom: 1.5em;
+	font-family: 'Inter', sans-serif;
+}
+@media (width: 375px) {
+	main .info h2 {
+		text-align: center;
+    font-size: 1.5em;
+		margin-bottom: 1em;
+	}
+}
+main .info h2 span {
+	color: hsl(277, 64%, 61%);
+}
+main .info > p {
+	margin-bottom: 3.5em;
+	line-height: 1.8;
+	color: hsla(0, 0%, 100%, 0.75);
+	font-family: 'Lexend Deca', sans-serif;
+}
+@media (width: 375px) {
+	main .info > p {
+		text-align: center;
+    font-size: .9em;
+		margin-bottom: 2.5em;
+	}
+}
+main .info .stats {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+@media (width: 375px) {
+	main .info .stats {
+		flex-direction: column;
+    text-align: center;
+    gap: 1.3em;
+	}
+}
+main .info .stats .stat p:first-child {
+	font-weight: 700;
+	font-size: 1.6em;
+	font-family: 'Inter', sans-serif;
+	margin-bottom: .2em;
+}
+main .info .stats .stat p:last-child {
+	color: hsla(0, 0%, 100%, 0.6);
+	text-transform: uppercase;
+	font-size: .8em;
+	font-family: 'Lexend Deca', sans-serif;
+}
+main .image {
+	background-image: url(../images/image-header-desktop.jpg);
+	background-size: cover;
+	width: 50%;
+	position: relative;
+}
+main .image::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(73 9 113 / 50%);
+}
+@media (width: 375px) {
+	main .image {
+		background-image: url(../images/image-header-mobile.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100%;
+		height: 25%;
+	}
+}
+footer {
+	color: white;
+	font-size: 11px;
+	text-align: center;
+	margin-bottom: .5em;
+}
+footer > a {
+	text-decoration: none;
+	color: hsl(277, 64%, 61%);
+	font-weight: bold;
+}
